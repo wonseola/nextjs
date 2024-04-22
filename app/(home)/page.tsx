@@ -6,10 +6,10 @@ export const metadata = {
 }
 
 
-export const URL_SRC = "https://nomad-movies.nomadcoders.workers.dev/movies"
+export const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getMovies() {
-    return fetch(URL_SRC).then(response => response.json());
+    return fetch(URL).then(response => response.json());
 }
 
 export default async function HomePage() {

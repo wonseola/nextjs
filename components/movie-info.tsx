@@ -1,9 +1,9 @@
-import { URL_SRC } from "../app/(home)/page";
+import { URL } from "../app/(home)/page";
 import styles from "../styles/movie-info.module.css";
 
 
 export async function getMovie(id: string) {
-    const response = await fetch(`${URL_SRC}/${id}`);
+    const response = await fetch(`${URL}/${id}`);
     return response.json();
 }
 

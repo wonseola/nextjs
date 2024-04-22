@@ -1,10 +1,10 @@
-import { URL_SRC } from "../app/(home)/page";
+import { URL } from "../app/(home)/page";
 import styles from "../styles/movie-videos.module.css";
 
 
 
 async function getVideos(id: string) {
-    const response = await fetch(`${URL_SRC}/${id}/videos`);
+    const response = await fetch(`${URL}/${id}/videos`);
     return response.json();
 }
 
