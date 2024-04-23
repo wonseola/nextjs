@@ -1,7 +1,8 @@
 import { Suspense } from "react";
 import MovieInfo, { getMovie } from "../../../../components/movie-info";
+import MovieCredits from "../../../../components/movie-credits";
+import styles from "../../../../styles/movie-info.module.css"
 import MovieVideos from "../../../../components/movie-videos";
-
 interface IParams {
     params: { id: string };
 }
@@ -21,9 +22,12 @@ export default async function MovieDetail(
     // const [movie, videos] = await Promise.all([getMovie(id), getVideos(id)])
     // return <h1>{movie.title}</h1>
     return (
-        <div>
+        <div className={styles.ani}>
             <Suspense fallback={<h1>Loading movie info</h1>}>
                 <MovieInfo id={id} />
+            </Suspense>
+            <Suspense>
+                <MovieCredits id={id} />
             </Suspense>
             <Suspense fallback={<h1>Loading movie videos</h1>}>
                 <MovieVideos id={id} />

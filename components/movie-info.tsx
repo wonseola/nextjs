@@ -23,3 +23,4 @@ export default async function MovieInfo({ id }: { id: string }) {
         </div>
     )
 }
+
